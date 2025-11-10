@@ -77,7 +77,11 @@ class Scanner {
                 break;
             case '/':
                 if (match('/')) {
+                    // Comentário de linha: ignora até o fim da linha
                     while (peek() != '\n' && !isAtEnd()) advance();
+                } else if (match('*')) {
+                    // Comentário de bloco: processa até encontrar '*/'
+                    blockComment();
                 } else {
                     addToken(SLASH);
                 }
@@ -100,6 +104,23 @@ class Scanner {
                 }
                 break;
         }
+    }
+
+    private void blockComment() {
+        // Processa até encontrar '*/'
+        while (!isAtEnd()) {
+            if (peek() == '*' && peekNext() == '/') {
+                advance(); // Consome o '*'
+                advance(); // Consome o '/'
+                return;
+            } else if (peek() == '\n') {
+                line++;
+            }
+            advance();
+        }
+
+        // Se chegou aqui, o comentário não foi fechado
+        Lox.error(line, "Unterminated block comment.");
     }
 
     private void identifier() {
