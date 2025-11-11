@@ -31,6 +31,8 @@ public class GenerateAst {
         writer.println();
         writer.println("abstract class " + baseName + " {");
 
+        defineVisitor(writer, baseName, types);
+
         // The AST classes
         for (String type : types) {
             String className = type.split(":")[0].trim();
