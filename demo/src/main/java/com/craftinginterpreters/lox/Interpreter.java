@@ -22,7 +22,9 @@ class Interpreter implements Expr.Visitor<Object> {
 
         switch (expr.operator.type) {
             case MINUS:
-            return -(double)right;
+                return -(double)right;
+            case BANG:
+                return !isTruthy(right);
         }
 
         // Unreachable.
