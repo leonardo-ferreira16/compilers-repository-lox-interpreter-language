@@ -1,6 +1,7 @@
 package main.java.com.craftinginterpreters.lox;
 
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.List;
 
 import static main.java.com.craftinginterpreters.lox.TokenType.*;
@@ -35,6 +36,7 @@ class Parser {
     }
 
     private Stmt statement() {
+        if (match(FOR)) return forStatement();
         if (match(IF)) return ifStatement();
         if (match(PRINT)) return printStatement();
         if (match(WHILE)) return whileStatement();
