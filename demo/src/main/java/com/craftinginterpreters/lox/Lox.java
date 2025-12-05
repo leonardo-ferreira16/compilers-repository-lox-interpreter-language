@@ -1,4 +1,3 @@
-// [file name]: Lox.java
 package main.java.com.craftinginterpreters.lox;
 
 import java.io.BufferedReader;
@@ -49,11 +48,11 @@ public class Lox {
         Scanner scanner = new Scanner(source);
         List<Token> tokens = scanner.scanTokens();
         Parser parser = new Parser(tokens);
-        Expr expression = parser.parse();
+        List<Stmt> statements = parser.parse();
 
         if (hadError) return;
 
-        interpreter.interpret(expression);
+        interpreter.interpret(statements);
     }
 
     static void error(int line, String message) {
