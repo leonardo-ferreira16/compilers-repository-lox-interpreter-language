@@ -1,10 +1,10 @@
-package main.java.com.craftinginterpreters.lox;
+package com.craftinginterpreters.lox;
 
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
 
-import static main.java.com.craftinginterpreters.lox.TokenType.*;
+import static com.craftinginterpreters.lox.TokenType.*;
 
 class Parser {
 

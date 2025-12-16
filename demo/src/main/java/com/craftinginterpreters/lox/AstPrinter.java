@@ -1,6 +1,17 @@
-package main.java.com.craftinginterpreters.lox;
+package com.craftinginterpreters.lox;
 
 import java.util.List;
+
+import com.craftinginterpreters.lox.Expr.Call;
+import com.craftinginterpreters.lox.Expr.Get;
+import com.craftinginterpreters.lox.Expr.Logical;
+import com.craftinginterpreters.lox.Expr.Set;
+import com.craftinginterpreters.lox.Expr.This;
+import com.craftinginterpreters.lox.Stmt.Class;
+import com.craftinginterpreters.lox.Stmt.Function;
+import com.craftinginterpreters.lox.Stmt.If;
+import com.craftinginterpreters.lox.Stmt.Return;
+import com.craftinginterpreters.lox.Stmt.While;
 
 class AstPrinter implements Expr.Visitor<String>, Stmt.Visitor<String> {
     String print(Stmt stmt) {
@@ -109,5 +120,65 @@ class AstPrinter implements Expr.Visitor<String>, Stmt.Visitor<String> {
                 builder.append(part);
             }
         }
+    }
+
+    @Override
+    public String visitClassStmt(Class stmt) {
+        // TODO Auto-generated method stub
+        throw new UnsupportedOperationException("Unimplemented method 'visitClassStmt'");
+    }
+
+    @Override
+    public String visitFunctionStmt(Function stmt) {
+        // TODO Auto-generated method stub
+        throw new UnsupportedOperationException("Unimplemented method 'visitFunctionStmt'");
+    }
+
+    @Override
+    public String visitIfStmt(If stmt) {
+        // TODO Auto-generated method stub
+        throw new UnsupportedOperationException("Unimplemented method 'visitIfStmt'");
+    }
+
+    @Override
+    public String visitReturnStmt(Return stmt) {
+        // TODO Auto-generated method stub
+        throw new UnsupportedOperationException("Unimplemented method 'visitReturnStmt'");
+    }
+
+    @Override
+    public String visitWhileStmt(While stmt) {
+        // TODO Auto-generated method stub
+        throw new UnsupportedOperationException("Unimplemented method 'visitWhileStmt'");
+    }
+
+    @Override
+    public String visitCallExpr(Call expr) {
+        // TODO Auto-generated method stub
+        throw new UnsupportedOperationException("Unimplemented method 'visitCallExpr'");
+    }
+
+    @Override
+    public String visitGetExpr(Get expr) {
+        // TODO Auto-generated method stub
+        throw new UnsupportedOperationException("Unimplemented method 'visitGetExpr'");
+    }
+
+    @Override
+    public String visitLogicalExpr(Logical expr) {
+        // TODO Auto-generated method stub
+        throw new UnsupportedOperationException("Unimplemented method 'visitLogicalExpr'");
+    }
+
+    @Override
+    public String visitSetExpr(Set expr) {
+        // TODO Auto-generated method stub
+        throw new UnsupportedOperationException("Unimplemented method 'visitSetExpr'");
+    }
+
+    @Override
+    public String visitThisExpr(This expr) {
+        // TODO Auto-generated method stub
+        throw new UnsupportedOperationException("Unimplemented method 'visitThisExpr'");
     }
 }

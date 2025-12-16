@@ -1,4 +1,4 @@
-package main.java.com.craftinginterpreters.lox;
+package com.craftinginterpreters.lox;
 
 public class Main {
     public static void main(String[] args) {

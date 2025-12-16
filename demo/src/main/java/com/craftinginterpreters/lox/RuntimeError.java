@@ -1,5 +1,5 @@
 // [file name]: RuntimeError.java
-package main.java.com.craftinginterpreters.lox;
+package com.craftinginterpreters.lox;
 
 class RuntimeError extends RuntimeException {
     final Token token;
