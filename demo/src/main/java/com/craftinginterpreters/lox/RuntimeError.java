@@ -1,4 +1,3 @@
-// [file name]: RuntimeError.java
 package com.craftinginterpreters.lox;
 
 class RuntimeError extends RuntimeException {
