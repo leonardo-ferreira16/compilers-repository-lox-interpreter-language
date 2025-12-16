@@ -67,54 +67,88 @@ Encadeamento de ambientes
 
 📦 com.craftinginterpreters.lox
 ├── 🎯 Lox.java              # Ponto de entrada
+
 ├── 🔍 Scanner.java          # Análise léxica → Tokens
+
 ├── 📐 Parser.java           # Análise sintática → AST
+
 ├── 🧠 Interpreter.java      # Execução
+
 ├── 🎯 Resolver.java         # Resolução de escopos
+
 ├── 📊 Expr.java             # Expressões (AST)
+
 ├── 📝 Stmt.java             # Declarações (AST)
+
 ├── 🔧 Environment.java      # Gerenciamento de variáveis
+
 ├── 🏛️ LoxClass.java         # Classes
+
 ├── 📦 LoxInstance.java      # Instâncias
+
 ├── 🔌 LoxFunction.java      # Funções
+
 ├── 🔌 LoxCallable.java      # Interface para chamáveis
+
 ├── ⚠️ RuntimeError.java     # Erros em tempo de execução
+
 ├── 🔣 Token.java            # Representação de tokens
+
 ├── 🔡 TokenType.java        # Tipos de tokens
+
 └── 🖨️ AstPrinter.java       # Impressão da AST (debug)
 
 🚀 Como Compilar e Executar
 
+
 Pré-requisitos
+
 
 Java JDK 8 ou superior
 
+
 Terminal/Command Prompt
+
 
 📦 Passo 1: Clonar/Download do Projeto
 
+
 git clone [repositório](https://github.com/leonardo-ferreira16/compilers-repository-lox-interpreter-language)
+
 cd compilers-repository-lox-interpreter-language
+
 
 🔧 Passo 2: Compilar o Projeto
 
+
 javac com/craftinginterpreters/lox/*.java
+
 
 ▶️ Passo 3: Executar Programas Lox
 
+
 Nesse caso, a nossa instrução é de rodar o código direto no método main da classe Lox.java. Após isso, um terminal será aberto para programação em prompt
+
 
 Exemplo de uso:
 > var x = 10;
+
 > print x + 5;
+
 15
+
 > fun soma(a, b) { return a + b; }
+
 > print soma(3, 4);
+
 7
+
 
 📚 Exemplos de Programas Lox
 
+
 1️⃣ Cálculo Fatorial (fatorial.lox)
+
 
 fun fatorial(n) {
     if (n <= 1) {
@@ -123,7 +157,7 @@ fun fatorial(n) {
     return n * fatorial(n - 1);
 }
 
-// Testar a função
+ Testar a função
 print "Calculando fatorais de 1 a 10:";
 for (var i = 1; i <= 10; i = i + 1) {
     print i + "! = " + fatorial(i);
@@ -131,7 +165,7 @@ for (var i = 1; i <= 10; i = i + 1) {
 
 2️⃣ Classe Retângulo (retangulo.lox)
 
-// Classe Retangulo
+Classe Retangulo
 class Retangulo {
     init(largura, altura) {
         this.largura = largura;
@@ -163,26 +197,46 @@ print "  Perímetro: " + r2.perimetro();
 Execução do fatorial.lox
 
 Calculando fatorais de 1 a 10:
+
 1! = 1
+
 2! = 2
+
 3! = 6
+
 4! = 24
+
 5! = 120
+
 6! = 720
+
 7! = 5040
+
 8! = 40320
+
 9! = 362880
+
 10! = 3628800
+
 
 Execução do retangulo.lox
 
+
 Retângulo 1 (5x3):
+
   Área: 15
+  
   Perímetro: 16
+  
 
 Retângulo 2 (7.5x2.5):
+
   Área: 18.75
+  
   Perímetro: 20
+  
+
+
 
   👥 Discentes
   
