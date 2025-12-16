@@ -3,10 +3,13 @@
 Um interpretador completo para a linguagem Lox, desenvolvido como projeto acadêmico da disciplina de Compiladores. Implementa todos os recursos fundamentais de uma linguagem de programação moderna, incluindo variáveis, funções, classes e controle de fluxo.
 
 📋 Sobre a Linguagem Lox
+
 Lox é uma linguagem de script dinâmica, orientada a objetos, inspirada em JavaScript e Python. Este projeto implementa um interpretador completo seguindo a arquitetura descrita no livro "Crafting Interpreters" de Robert Nystrom.
 
 ✨ Funcionalidades Implementadas
+
 ✅ Expressões e Operadores
+
 Aritméticas: +, -, *, /
 
 Comparação: ==, !=, <, <=, >, >=
@@ -16,6 +19,7 @@ Lógicos: and, or, !
 Concatenação de strings
 
 ✅ Declarações e Controle de Fluxo
+
 Variáveis: var
 
 Blocos: { }
@@ -27,6 +31,7 @@ Loops: while, for
 Saída: print
 
 ✅ Funções
+
 Declaração: fun nome(parametros) { ... }
 
 Retorno: return valor
@@ -38,6 +43,7 @@ Funções aninhadas
 Funções nativas (ex: clock())
 
 ✅ Programação Orientada a Objetos
+
 Classes: class Nome { ... }
 
 Métodos e propriedades
@@ -49,6 +55,7 @@ Referência: this
 Instanciação: Classe()
 
 ✅ Gerenciamento de Escopos
+
 Variáveis locais e globais
 
 Resolução estática de escopos
@@ -56,6 +63,7 @@ Resolução estática de escopos
 Encadeamento de ambientes
 
 🏗️ Arquitetura do Projeto
+
 📦 com.craftinginterpreters.lox
 ├── 🎯 Lox.java              # Ponto de entrada
 ├── 🔍 Scanner.java          # Análise léxica → Tokens
@@ -75,19 +83,24 @@ Encadeamento de ambientes
 └── 🖨️ AstPrinter.java       # Impressão da AST (debug)
 
 🚀 Como Compilar e Executar
+
 Pré-requisitos
+
 Java JDK 8 ou superior
 
 Terminal/Command Prompt
 
 📦 Passo 1: Clonar/Download do Projeto
+
 git clone [repositório](https://github.com/leonardo-ferreira16/compilers-repository-lox-interpreter-language)
 cd compilers-repository-lox-interpreter-language
 
 🔧 Passo 2: Compilar o Projeto
+
 javac com/craftinginterpreters/lox/*.java
 
 ▶️ Passo 3: Executar Programas Lox
+
 Nesse caso, a nossa instrução é de rodar o código direto no método main da classe Lox.java. Após isso, um terminal será aberto para programação em prompt
 
 Exemplo de uso:
@@ -99,8 +112,9 @@ Exemplo de uso:
 7
 
 📚 Exemplos de Programas Lox
+
 1️⃣ Cálculo Fatorial (fatorial.lox)
-// Função recursiva para calcular fatorial
+
 fun fatorial(n) {
     if (n <= 1) {
         return 1;
@@ -115,6 +129,7 @@ for (var i = 1; i <= 10; i = i + 1) {
 }
 
 2️⃣ Classe Retângulo (retangulo.lox)
+
 // Classe Retangulo
 class Retangulo {
     init(largura, altura) {
@@ -131,7 +146,6 @@ class Retangulo {
     }
 }
 
-// Programa principal
 var r1 = Retangulo(5, 3);
 var r2 = Retangulo(7.5, 2.5);
 
@@ -144,7 +158,9 @@ print "  Área: " + r2.area();
 print "  Perímetro: " + r2.perimetro();
 
 📊 Resultados Esperados
+
 Execução do fatorial.lox
+
 Calculando fatorais de 1 a 10:
 1! = 1
 2! = 2
@@ -158,6 +174,7 @@ Calculando fatorais de 1 a 10:
 10! = 3628800
 
 Execução do retangulo.lox
+
 Retângulo 1 (5x3):
   Área: 15
   Perímetro: 16
@@ -167,11 +184,13 @@ Retângulo 2 (7.5x2.5):
   Perímetro: 20
 
   👥 Discentes
-Leonardo Abreu Ferreira - GitHub
+  
+Leonardo Abreu Ferreira - [GitHub](https://github.com/leonardo-ferreira16)
 
-Pedro Arthur Da Silva Guimarães - GitHub
+Pedro Arthur Da Silva Guimarães - [GitHub](https://github.com/ArthurKodart)
 
 📖 Referências
+
 Nystrom, R. (2021). Crafting Interpreters. Genever Benning.
 
 Documentação oficial Java: https://docs.oracle.com/javase/
